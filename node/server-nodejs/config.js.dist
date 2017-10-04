@@ -1,0 +1,16 @@
+/**
+This is the config file for the emulewebservice
+*/
+
+var config = {};
+
+
+//config.rootdir=(__dirname);
+config.rootdir='/opt/emulewebservice';
+config.servicename='gateway';
+config.overalldomain='mule.global';
+config.mongoURI='mongodb://localhost/emule';
+config.upload_path="/opt/emulewebservice/node/server-nodejs/uploads/";
+config.port=3000;
+
+module.exports = config;

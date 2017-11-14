@@ -1,10 +1,11 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-var mongoose = require('mongoose');
-var AccessPoint = require('../models/AccessPoint.js');
+var mongoose = require("mongoose");
+var AccessPoint = require("../models/AccessPoint.js");
 /* GET /accesspoints listing. */
-router.get('/', function(req, res, next) {
-  AccessPoint.find(function (err, accesspoints) {
+router.get("/", function(req, res, next) {
+  console.log(req.user.email);
+  AccessPoint.find(function(err, accesspoints) {
     if (err) return next(err);
     res.json(accesspoints);
   });
